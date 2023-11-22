@@ -1,0 +1,46 @@
+// Primary colors
+// Naming convention based on position in color wheel
+// 30 - 210: warm - mid - cool
+// 210 - 30: cool - mid - warm
+$c-red-c-400: 25 97% 53%;
+
+// Neutral colors
+$c-white-000: 0 0% 100%;
+$c-blue-cyan-200: 217 12% 63%;
+$c-blue-cyan-300: 216 12% 54%;
+$c-blue-cyan-800: 213 19% 18%;
+$c-blue-cyan-900: 216 12% 8%;
+
+// Color map for generating color utility classes
+$utility-color: (
+);
+
+// Color map for generating custom color properties
+$contextual-color: (
+  "color": (
+    "body": $c-blue-cyan-300,
+    "heading": $c-white-000,
+  ),
+  "background-color": ( 
+    "body": $c-blue-cyan-900,
+    "submit-button": $c-red-c-400,
+    "rating-button": $c-blue-cyan-800,
+    "star": $c-blue-cyan-800,
+  ),
+);
+
+// Theme map for generating theme classes
+$theme-color: (
+  "dark": (
+    "color": (
+    ),
+    "background-color": (
+    ),
+  ),
+  "light": (
+    "color": (
+    ),
+    "background-color": (
+    ),
+  ),
+);

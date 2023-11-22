@@ -1,0 +1,18 @@
+@use "./abstracts/" as *;
+@use "./base/" as *;
+@use "./components/" as *;
+@use "./layout/" as *;
+@use "./utilities/" as *;
+
+body {
+    --width-button: 3rem;
+}
+
+.star {
+    @include grid(center, center, null);
+    
+    width: var(--width-button);
+    aspect-ratio: 1;    
+    border-radius: 50%;
+    background-color: hsl(var(--bgc-star));
+} 
