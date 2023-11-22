@@ -28,11 +28,12 @@ $contextual-font: (
     ),
     "size": (
         "body": 0.9375rem,
-        "h1": 1.5rem,
-        "h2": 1.25rem,
+        "h1": 1.25rem,
+        "h2": 1rem,
     ),
     "weight": (
         "body": $font-weight-normal,
         "heading": $font-weight-bold,
+        "button": $font-weight-bold,
     ),
 );

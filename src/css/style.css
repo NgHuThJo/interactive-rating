@@ -1,8 +1,8 @@
-.flex, .flex-col, .flex-group, .flex-grid {
+.rating__list, .flex, .flex-col, .flex-group, .flex-grid {
   display: flex;
 }
 
-.star, .grid, .grid-stack, .even-cols, .auto-grid {
+.rating__module, .circle, .grid, .grid-stack, .even-cols, .auto-grid {
   display: grid;
 }
 
@@ -42,16 +42,22 @@ h4 {
 :root {
   --c-body: 216 12% 54%;
   --c-heading: 0 0% 100%;
+  --c-rating-button: 213 19% 18%;
+  --c-rating-button-active: 0 0% 100%;
+  --c-submit-button: 0 0% 100%;
   --bgc-body: 216 12% 8%;
+  --bgc-rating-module: 213 19% 18%;
+  --bgc-circle: 213 19% 18%;
+  --bgc-rating-button-hover: 25 97% 53%;
+  --bgc-rating-button-active: 217 12% 63%;
   --bgc-submit-button: 25 97% 53%;
-  --bgc-rating-button: 213 19% 18%;
-  --bgc-star: 213 19% 18%;
   --ff-body: "Overpass", sans-serif;
   --fs-body: 0.9375rem;
-  --fs-h1: 1.5rem;
-  --fs-h2: 1.25rem;
+  --fs-h1: 1.25rem;
+  --fs-h2: 1rem;
   --fw-body: 400;
   --fw-heading: 700;
+  --fw-button: 700;
 }
 
 *,
@@ -2032,15 +2038,51 @@ h6 {
   isolation: isolate;
 }
 
-body {
-  --width-button: 3rem;
+button {
+  font-weight: var(--fw-button);
 }
 
-.star {
+.rating__module {
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: hsl(var(--bgc-rating-module));
+}
+
+.rating__list {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circle {
   justify-items: center;
   align-items: center;
-  width: var(--width-button);
+  width: 3rem;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-color: hsl(var(--bgc-star));
+  background-color: hsl(var(--bgc-circle));
+  overflow: hidden;
+}
+
+.rating__button {
+  width: 100%;
+  height: 100%;
+}
+.rating__button:hover, .rating__button:focus {
+  color: hsl(var(--c-rating-button-active));
+  background-color: hsl(var(--bgc-rating-button-hover));
+}
+.rating__button[aria-selected=true] {
+  color: hsl(var(--c-rating-button-active));
+  background-color: hsl(var(--bgc-rating-button-active));
+}
+
+.submit__button {
+  padding: 0.75rem;
+  border-radius: 2rem;
+  color: hsl(var(--c-submit-button));
+  background-color: hsl(var(--bgc-submit-button));
+}
+.submit__button:hover, .submit__button:focus {
+  color: hsl(var(--bgc-submit-button));
+  background-color: hsl(var(--c-submit-button));
 }/*# sourceMappingURL=style.css.map */

@@ -4,15 +4,59 @@
 @use "./layout/" as *;
 @use "./utilities/" as *;
 
-body {
-    --width-button: 3rem;
+button {
+    font: {
+        weight: var(--fw-button);
+    }
 }
 
-.star {
+.rating__module {
+    @include grid;
+
+    gap: 2rem;
+    padding: 1.5rem;
+    background-color: hsl(var(--bgc-rating-module));
+}
+
+.rating__list {
+    @include flex(null, space-between, center, null);
+}
+
+.circle {
     @include grid(center, center, null);
     
-    width: var(--width-button);
+    width: 3rem;
     aspect-ratio: 1;    
     border-radius: 50%;
-    background-color: hsl(var(--bgc-star));
-} 
+    background-color: hsl(var(--bgc-circle));
+    overflow: hidden;
+}
+
+.rating__button {
+    width: 100%;
+    height: 100%;
+
+    &:hover,
+    &:focus {
+        color: hsl(var(--c-rating-button-active));
+        background-color: hsl(var(--bgc-rating-button-hover));
+    }
+
+    &[aria-selected="true"] {
+        color: hsl(var(--c-rating-button-active));
+        background-color: hsl(var(--bgc-rating-button-active));
+    } 
+}
+
+.submit__button {
+    padding: 0.75rem;
+    border-radius: 2rem;
+    color: hsl(var(--c-submit-button));
+    background-color: hsl(var(--bgc-submit-button));
+
+    &:hover,
+    &:focus {
+        color: hsl(var(--bgc-submit-button));
+        background-color: hsl(var(--c-submit-button));
+    }
+}

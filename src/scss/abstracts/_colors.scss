@@ -20,12 +20,17 @@ $contextual-color: (
   "color": (
     "body": $c-blue-cyan-300,
     "heading": $c-white-000,
+    "rating-button": $c-blue-cyan-800,
+    "rating-button-active": $c-white-000,
+    "submit-button": $c-white-000,
   ),
   "background-color": ( 
     "body": $c-blue-cyan-900,
+    "rating-module": $c-blue-cyan-800,
+    "circle": $c-blue-cyan-800,
+    "rating-button-hover": $c-red-c-400,
+    "rating-button-active": $c-blue-cyan-200,
     "submit-button": $c-red-c-400,
-    "rating-button": $c-blue-cyan-800,
-    "star": $c-blue-cyan-800,
   ),
 );
 
