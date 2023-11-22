@@ -14,9 +14,9 @@ $grid-gap-default: 1rem;
 $grid-min-column-size-default: null;
 
 $container-max-width-default: 60rem;
-$container-max-width-small: 40rem;
+$container-max-width-small: 30rem;
 $container-max-width-large: 80rem;
-$container-padding-inline: 2rem;
+$container-padding-inline: 1rem;
 
 $inline-spacing: clamp(2rem, 5svw + 1rem, 4rem);
 $block-spacing: clamp(3rem, 7.5svw + 1.5rem, 6rem);

@@ -10,48 +10,50 @@
   <link href="https://fonts.googleapis.com/css2?family=overpass:wght@400;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="./src/css/style.css">
   <title>Frontend Mentor | Interactive Rating Component</title>
+  <script src="./js/main.js" defer></script>
 
   <!-- feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
-<body>
+<body class="container">
 <main>
   <section class="rating__module">
-    <div class="circle">
+    <div class="circle" aria-selected="false">
       <img src="./images/icon-star.svg" alt="star icon">
     </div>
-    <h1>How did we do?</h1>
+    <p class="question">How did we do?</p>
     <p>Please let us know how we did with your support request. All feedback is appreciated</p>
     <ul class="rating__list">
-      <li class="circle">
-        <button class="rating__button" aria-selected="true">1</button>
+      <li class="circle" aria-selected="false">
+        <button class="rating__button">1</button>
       </li>
-      <li class="circle">
-        <button class="rating__button" aria-selected="false">2</button>
+      <li class="circle" aria-selected="false">
+        <button class="rating__button">2</button>
       </li>
-      <li class="circle">
-        <button class="rating__button" aria-selected="false">3</button>
+      <li class="circle" aria-selected="false">
+        <button class="rating__button">3</button>
       </li>
-      <li class="circle">
-        <button class="rating__button" aria-selected="false">4</button>
+      <li class="circle" aria-selected="false">
+        <button class="rating__button">4</button>
       </li>
-      <li class="circle">
-        <button class="rating__button" aria-selected="false">5</button>
+      <li class="circle" aria-selected="false">
+        <button class="rating__button">5</button>
       </li>
     </ul>
     <button class="submit__button">Submit</button>
   </section>
+
+  <section class="thank-you__module none">
+    <img src="./images/illustration-thank-you.svg" alt="thank you illustration">
+    <p class="rating__choice">
+      You selected
+      <span></span>
+      out of 5
+    </p>
+    <p class="question">Thank you!</p>
+    <p>We appreciate you taking the time to give a rating. if you ever need more support, 
+  don’t hesitate to get in touch!</p>
+  </section>
 </main>
-
-  <!-- thank you state start -->
-
-  You selected <!-- add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- thank you state end -->
 
 </body>
 </html>

@@ -4,6 +4,20 @@
 @use "./layout/" as *;
 @use "./utilities/" as *;
 
+body {
+    --padding: 1.5rem;
+    --gap: 2rem;
+
+    @include grid;
+
+    place-content: center;
+}
+
+main {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
 button {
     font: {
         weight: var(--fw-button);
@@ -13,19 +27,38 @@ button {
 .rating__module {
     @include grid;
 
-    gap: 2rem;
-    padding: 1.5rem;
+    gap: var(--gap);
+    padding: var(--padding);
     background-color: hsl(var(--bgc-rating-module));
+}
+
+.thank-you__module {
+    @include grid(center, center, var(--gap));
+
+    padding: var(--padding);
+    text-align: center;
+    background-color: hsl(var(--bgc-thank-you-module));
 }
 
 .rating__list {
     @include flex(null, space-between, center, null);
+
+    li:hover {
+        color: hsl(var(--c-rating-button-active));
+        background-color: hsl(var(--bgc-rating-button-hover));
+    }
+
+    li[aria-selected="true"] {
+        color: hsl(var(--c-rating-button-active));
+        background-color: hsl(var(--bgc-rating-button-active));
+    } 
 }
 
 .circle {
     @include grid(center, center, null);
     
     width: 3rem;
+
     aspect-ratio: 1;    
     border-radius: 50%;
     background-color: hsl(var(--bgc-circle));
@@ -35,17 +68,6 @@ button {
 .rating__button {
     width: 100%;
     height: 100%;
-
-    &:hover,
-    &:focus {
-        color: hsl(var(--c-rating-button-active));
-        background-color: hsl(var(--bgc-rating-button-hover));
-    }
-
-    &[aria-selected="true"] {
-        color: hsl(var(--c-rating-button-active));
-        background-color: hsl(var(--bgc-rating-button-active));
-    } 
 }
 
 .submit__button {
@@ -54,9 +76,23 @@ button {
     color: hsl(var(--c-submit-button));
     background-color: hsl(var(--bgc-submit-button));
 
-    &:hover,
-    &:focus {
+    &:hover {
         color: hsl(var(--bgc-submit-button));
         background-color: hsl(var(--c-submit-button));
     }
+}
+
+.question {
+    font: {
+        weight: var(--fw-heading);
+        size: 1.5rem;
+    }
+    color: hsl(var(--c-heading));
+}
+
+.rating__choice {
+    padding: 0.25rem 1rem;
+    border-radius: 3rem;
+    color: hsl(var(--c-rating-choice));
+    background-color: hsl(var(--bgc-rating-choice));
 }
